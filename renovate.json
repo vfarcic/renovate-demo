@@ -3,17 +3,13 @@
   "extends": [
     "config:base"
   ],
-  
+  "rangeStrategy": "pin",
+  "baseBranches": ["dependency-updates"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     }
-  ],
-  "platformAutomerge": true
-
+  ]
+  
 }
